@@ -12,10 +12,13 @@ The Collatz Conjecture
 
 def main(a,b):
 
+    from datetime import datetime
+    startTime = datetime.now()
+
     #a = input("Enter in lower range boundary: ")
     #b = input("Enter in upper range boundary: ")
 
-
+    """
     try:
         a = int(a)
     except:
@@ -66,7 +69,7 @@ def main(a,b):
         else:
             print("Good bye")
             quit()
-
+    """
 
     cycle_dict = {}
     value_list = []
@@ -103,9 +106,11 @@ def main(a,b):
     value_list.sort(reverse=True)
 
 
-    print( list(cycle_dict.items()))
-    print(value_list)
+
+    #print( list(cycle_dict.items()))
+    #print(value_list)
     print(a,b,value_list[0])
+    print(datetime.now()-startTime)
 
 
 
@@ -116,3 +121,4 @@ def main(a,b):
 
 main(1,10)
 main(100,200)
+main(201,300)
