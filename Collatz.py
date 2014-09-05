@@ -10,66 +10,10 @@ The Collatz Conjecture
 # stop when n = 1.
 # fail for 2 ** n
 
-def main(a,b):
+def collatz_solve(a,b):
 
     from datetime import datetime
     startTime = datetime.now()
-
-    #a = input("Enter in lower range boundary: ")
-    #b = input("Enter in upper range boundary: ")
-
-    """
-    try:
-        a = int(a)
-    except:
-        print("\n 'a' and 'b' must be integers")
-
-        #user decision to continue
-        user_input_error = input("Press C to continue or any key to quit: ")
-        if(user_input_error == 'c' or user_input_error == "C"):
-            main()
-        else:
-            print("Good bye")
-            quit()
-
-    try:
-        b = int(b)
-    except:
-        print("\n 'a' and 'b' must be integers")
-
-        #user decision to continue
-        user_input_error = input("Press C to continue or any key to quit: ")
-        if(user_input_error == 'c' or user_input_error == "C"):
-            main()
-        else:
-            print("Good bye")
-            quit()
-
-    #length = 1
-    max_length = 1
-    max_seq = []
-
-    # each of the below assertions are handled in the try/except block below.
-    #assert a > 0 and type(a)== int     # positive integer
-    #assert b > 0 and type(b)== int     # positive integer
-    #assert a <= b                      # range must be of the form range(min,max)
-
-
-    try:
-        assert a > 0  and type(a) == int and b > 0 and type(b) == int and a <= b
-    except:
-        print("\n ==> 'a' and 'b' must be positive integers ")
-        print(" ==> 'a' must be less than or equal to 'b': a <= b \n")
-
-
-        #user decision to continue
-        user_input_error = input("Press C to continue or any key to quit: ")
-        if(user_input_error == 'c' or user_input_error == "C"):
-            main()
-        else:
-            print("Good bye")
-            quit()
-    """
 
     cycle_dict = {}
     value_list = []
@@ -96,7 +40,6 @@ def main(a,b):
             seq.append(1)
 
             for i in range(len(seq)):
-
                 if not(seq[i] in cycle_dict.keys()):
                     cycle_dict[seq[i]] = len(seq[i:])
 
@@ -106,9 +49,6 @@ def main(a,b):
     value_list.sort(reverse=True)
 
 
-
-    #print( list(cycle_dict.items()))
-    #print(value_list)
     print(a,b,value_list[0])
     print(datetime.now()-startTime)
 
@@ -117,8 +57,11 @@ def main(a,b):
 
 
 
+def main():
 
+    collatz_solve(1,10)
+    collatz_solve(100,200)
+    collatz_solve(201,210)
+    collatz_solve(900,1000)
 
-main(1,10)
-main(100,200)
-main(201,300)
+main()
