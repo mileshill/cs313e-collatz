@@ -19,10 +19,12 @@ def collatz_solve():
     read_list = f.split()
     a,b = [int(v) for v in read_list]
     rangeMin,rangeMax= read_list[0],read_list[1]
+
     m = b//2 + 1
 
-    if( m > a):
+    while m > a:
         a = m
+        m = b//2  + 1
 
 
 
@@ -33,7 +35,7 @@ def collatz_solve():
     # Returns integer with longest cycle length and cycle length. >>> max_n max_cycle
     for n in range(a,b+1):
 
-        if not(n in cycle_dict.keys()):
+        if not(n in cycle_dict.keys()): # integer cycle length not yet calculated
 
             seq = []   # reset the sequence for each integer tested
 
@@ -48,17 +50,18 @@ def collatz_solve():
             seq.append(1)
 
             for i in range(len(seq)):
-                if not(seq[i] in cycle_dict.keys()):
+                if not(seq[i] in cycle_dict.keys()): # if the calculated seq val not in keys, add key:value
                     cycle_dict[seq[i]] = len(seq[i:])
 
-    for i in range(a,b+1):
+    for i in range(a,b+1): # all k:v pairs in cycle range
         value_list.append(cycle_dict[i])
 
-    value_list.sort(reverse=True)
+    value_list.sort(reverse=True) # move longest cycle length to position[0]
     print(rangeMin + " " + rangeMax + " " + str(value_list[0]))
     print(datetime.now()-startTime)
 def main():
 
+    collatz_solve()
     collatz_solve()
     collatz_solve()
     collatz_solve()
