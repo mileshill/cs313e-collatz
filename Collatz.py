@@ -10,10 +10,21 @@ The Collatz Conjecture
 # stop when n = 1.
 # fail for 2 ** n
 
-def collatz_solve(a,b):
+def collatz_solve():
 
     from datetime import datetime
     startTime = datetime.now()
+
+    f = input()
+    read_list = f.split()
+    a,b = [int(v) for v in read_list]
+    rangeMin,rangeMax= read_list[0],read_list[1]
+    m = b//2 + 1
+
+    if( m > a):
+        a = m
+
+
 
     cycle_dict = {}
     value_list = []
@@ -25,18 +36,15 @@ def collatz_solve(a,b):
         if not(n in cycle_dict.keys()):
 
             seq = []   # reset the sequence for each integer tested
-            length = 1 # reset the cycle count for each integer tested
 
             while (n!= 1):  # entry condition for algorithm
                 seq.append(n)
 
                 if( n % 2 == 0): # even operation
                     n = n // 2
-                    length += 1
 
                 else:             # odd operation
                     n = n * 3 + 1
-                    length += 1
             seq.append(1)
 
             for i in range(len(seq)):
@@ -47,21 +55,12 @@ def collatz_solve(a,b):
         value_list.append(cycle_dict[i])
 
     value_list.sort(reverse=True)
-
-
-    print(a,b,value_list[0])
+    print(rangeMin + " " + rangeMax + " " + str(value_list[0]))
     print(datetime.now()-startTime)
-
-
-
-
-
-
 def main():
 
-    collatz_solve(1,10)
-    collatz_solve(100,200)
-    collatz_solve(201,210)
-    collatz_solve(900,1000)
+    collatz_solve()
+    collatz_solve()
+    collatz_solve()
 
 main()
