@@ -11,9 +11,9 @@ The Collatz Conjecture
 # fail for 2 ** n
 
 
-# This is my demo line
 
-def collatz_solve():
+
+def collatz_eval():
 
     from datetime import datetime
     startTime = datetime.now()
@@ -42,6 +42,7 @@ def collatz_solve():
 
             seq = []   # reset the sequence for each integer tested
 
+
             while (n!= 1):  # entry condition for algorithm
                 seq.append(n)
 
@@ -61,13 +62,14 @@ def collatz_solve():
         value_list.append(cycle_dict[i])
 
     value_list.sort(reverse=True) # move longest cycle length to position[0]
-    print(rangeMin + " " + rangeMax + " " + str(value_list[0]))
-    print(datetime.now()-startTime)
+    #print(rangeMin + " " + rangeMax + " " + str(value_list[0]))
+    #print(datetime.now()-startTime)
+    return value_list[0]
 def main():
 
-    collatz_solve()
-    collatz_solve()
-    collatz_solve()
-    collatz_solve()
+    print(collatz_eval())
+    collatz_eval()
+    collatz_eval()
+    collatz_eval()
 
 main()
