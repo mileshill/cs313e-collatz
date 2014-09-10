@@ -1,0 +1,101 @@
+commit 4cf12465cbc6c449a9ba0419e809ee804b9a527b
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Wed Sep 10 15:26:20 2014 -0500
+
+    Version of Collatz.py that SPOJ accepted
+
+commit 07adf03c7d1487fa5c910be9ecd0431f3dbba4bf
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Wed Sep 10 15:01:46 2014 -0500
+
+    Added EID to file names
+
+commit 244f9f872f8e40821c7b7a84b4a4952900ec9070
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Wed Sep 10 14:52:33 2014 -0500
+
+    Updated coverage file
+
+commit 4d79a1f8e312a8d8998c8348d18866ca05e3a9bf
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Wed Sep 10 14:37:45 2014 -0500
+
+    SPOJ Accepted version of SphereCollatz.py
+
+commit 070c56f9c3e5721d07c33819188d75df77787c93
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Wed Sep 10 09:48:55 2014 -0500
+
+    Updated all evaluation tests and 1000+ lines of test input
+
+commit bf02b8e408d51c8e95ea7901580aa3a199e5b69c
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Mon Sep 8 17:44:32 2014 -0500
+
+    Re-clone of RC.py and TC.py... Version-1 of SC.py
+
+commit 78357f8aabb9134a5ca59ff87ae9a426dd484d51
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Sun Sep 7 15:30:08 2014 -0500
+
+    Corrected failures for UnitTests2.py
+
+commit c289cc640521491cc786fa1b5a56fd5ac7019574
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Sun Sep 7 15:27:44 2014 -0500
+
+    Correction of UnitTests1.py: c = 1
+
+commit 84579a41ec39a29206bacb390ad9b434a3e3b04a
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Sun Sep 7 15:15:14 2014 -0500
+
+    Demo for study group
+
+commit 63b5211dc052122c1fd46eb91982a98fdeb47668
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Sun Sep 7 14:38:38 2014 -0500
+
+    Added class repo to private directory
+
+commit 25a16df8d1aaaecf2d3306a18830e44a1384ff14
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Sun Sep 7 14:26:59 2014 -0500
+
+    Change file name to run Class Project Failures
+
+commit f537021617b69aa4ecece4f750183a2a22ed0d71
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Fri Sep 5 21:34:20 2014 -0500
+
+    correction of if(m>a) to while(m>a)
+
+commit d52c90391ad3550464c8da76cda6c693241a8ddc
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Fri Sep 5 20:46:43 2014 -0500
+
+    improved the range function. m = e/2 + 1
+
+commit 68c4ff3edef59a05fea3dec530d0551457b1fccb
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Fri Sep 5 15:21:43 2014 -0500
+
+    Rename function. Delete all user testing clutter. IMPROVED TIMING
+
+commit 2c4f2531a5c1b78e5587ea04558fc6398f9a819e
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Fri Sep 5 15:12:02 2014 -0500
+
+    Added test timer and commented out user-tests
+
+commit 3c71cd443f0c7c4e5bbf880b8acba7f78cd4ba04
+Author: miles hill <mhill33@cs.utexas.edu>
+Date:   Fri Sep 5 12:38:01 2014 -0500
+
+    Initial script upload
+
+commit 7d312f7eac0244de7ef41e4cb48e6f36e4736318
+Author: mileshill <miles1618@gmail.com>
+Date:   Wed Sep 3 09:00:00 2014 -0500
+
+    :confetti_ball: Added .gitattributes & .gitignore files

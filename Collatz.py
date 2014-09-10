@@ -26,7 +26,7 @@ def collatz_read (r) :
 # collatz_eval
 # ------------
 
-cycle_dict ={}
+
 
 
 def collatz_eval(i ,j):
