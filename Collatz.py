@@ -26,56 +26,39 @@ def collatz_read (r) :
 # collatz_eval
 # ------------
 
-def collatz_eval (a,b) :
-    """
-    i the beginning of the range, inclusive
-    j the end       of the range, inclusive
-    return the max cycle length of the range [i, j]
-    """
-    m = b//2 + 1
-
-    while m > a:
-        a = m
-        m = b//2  + 1
+cycle_dict ={}
 
 
+def collatz_eval(i ,j):
 
-    cycle_dict = {}
-    value_list = []
-
-    # Collatz Algorithm: test all integers in the inclusive range [a,b]
-    # Returns integer with longest cycle length and cycle length. >>> max_n max_cycle
-    for n in range(a,b+1):
-
-        if not(n in cycle_dict.keys()): # integer cycle length not yet calculated
-
-            seq = []   # reset the sequence for each integer tested
+    b = max(i,j)
+    a = min(i,j)
+    m= b//2 + 1
+    if m > a:
+        a=m
 
 
-            while (n!= 1):  # entry condition for algorithm
-                seq.append(n)
+    length = 1
+    max_length = 1
+    #applying the "Hailstone Algorithm" to the user defined range
+    for n in range(a,b+1): # inclusive range of user defined variables
 
-                if( n % 2 == 0): # even operation
-                    n = n // 2
+        while (n != 1):
 
-                else:             # odd operation
-                    n = n * 3 + 1
-            seq.append(1)
-
-
-            for i in range(len(seq)):
-                if not(seq[i] in cycle_dict.keys()): # if the calculated seq val not in keys, add key:value
-                    cycle_dict[seq[i]] = len(seq[i:])
-
-    for i in range(a,b+1): # all k:v pairs in cycle range
-        value_list.append(cycle_dict[i])
-
-    value_list.sort(reverse=True) # move longest cycle length to position[0]
-    
-    return value_list[0]
+            if (n%2):
+                n = n + n//2 +1
+                length += 2
+            else:		  		#even procedure
+                n = n//2			# n + n//2 + 1
+                length += 1
 
 
-# -------------
+        if (length > max_length): 	#test the sequence length for each loop
+            max_length = length +1  	#reassigns max_length to longest sequence
+
+        length = 0                	#resets the length value for the next loop
+
+    return max_length# -------------
 # collatz_print
 # -------------
 
@@ -105,3 +88,12 @@ def collatz_solve (r, w) :
         i, j = a
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+import sys
+
+#from Collatz import collatz_solve
+
+# ----
+# main
+# ----
+
+collatz_solve(sys.stdin, sys.stdout)
