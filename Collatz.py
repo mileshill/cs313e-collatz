@@ -23,12 +23,15 @@ def collatz_read (r) :
     return [int(v) for v in a]
 
 # ------------
+# import cache functionality
+# ------------
+from functools import lru_cache
+
+# ------------
 # collatz_eval
 # ------------
 
-
-
-
+@lru_cache(maxsize=512)
 def collatz_eval(i ,j):
 
     b = max(i,j)
